@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #18181b;
+  --color-primary-hover: #27272a;
+}
+
+@layer base {
+  body {
+    @apply bg-[#FAFAFA] text-zinc-900 min-h-screen font-sans antialiased selection:bg-zinc-200;
+  }
+}
+
+@layer components {
+  .surface {
+    @apply bg-white border border-zinc-200 shadow-sm;
+  }
+  
+  .btn {
+    @apply inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium transition-colors duration-200 gap-2 rounded-md;
+  }
+  
+  .btn-primary {
+    @apply bg-zinc-900 text-white hover:bg-zinc-800 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-zinc-900 border border-zinc-200 hover:bg-zinc-50 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .form-label {
+    @apply block mb-1.5 text-sm font-medium text-zinc-700;
+  }
+  
+  .form-input {
+    @apply w-full px-3 py-2.5 bg-white border border-zinc-300 rounded-md text-zinc-900 transition-colors duration-200 focus:outline-none focus:border-zinc-900 focus:ring-1 focus:ring-zinc-900 placeholder:text-zinc-400 disabled:bg-zinc-50;
+  }
+}
